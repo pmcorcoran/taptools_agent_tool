@@ -8,7 +8,7 @@ The four files currently in the repository are
 - tool.py: used by the agent and calls functions from utility.py
 - schema.json: The taptools openapi spec. This is used in utility.py for
 api wrapper logic. And is given to the agent in tool.py so the agent
-knows the information available and how what endpoint and parameters
+knows the information available and what endpoint and parameters
 are needed to to request that information.
 - policy_and_hex.json: contains the policy id and hex name for
 cardano native tokens. These values are required as parameters for certain
