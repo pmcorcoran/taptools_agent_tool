@@ -19,7 +19,7 @@ with open("policy_and_hex.json", 'r') as f:
     policy_and_hex = json.load(f)
 
 with open("reduced_schema.json") as f:
-     taptools_reduced_spec = json.load(f)
+    taptools_reduced_spec = json.load(f)
 
 
 
