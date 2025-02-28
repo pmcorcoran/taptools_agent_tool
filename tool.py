@@ -13,10 +13,13 @@ from utility import TapToolsAPIWrapper
 
 
 with open("schema.json") as f:
-        taptools_spec = json.load(f)
+    taptools_spec = json.load(f)
 
 with open("policy_and_hex.json", 'r') as f:
     policy_and_hex = json.load(f)
+
+with open("reduced_schema.json") as f:
+     taptools_reduced_spec = json.load(f)
 
 
 
@@ -29,8 +32,8 @@ class TapToolsAPIResults(BaseTool):  # type: ignore[override]
         "This tool is handy when you need to find information about the cardano blockchain "
         "The input should be an endpoint plus required or optional parameters if necessary "
         "and the output is a JSON object with the results."
-        f"To see enpoints and their parameters check out the openapi json spec {taptools_spec}"
-        f"The policy id and hex name for some tokens can be found here {policy_and_hex} "
+        f"To see enpoints and their descriptions and parameters check out the reduced openapi json spec {taptools_reduced_spec}. "
+        #f"The policy id and hex name for some tokens can be found here {policy_and_hex} "
     )
     api_wrapper: TapToolsAPIWrapper = Field(default_factory=TapToolsAPIWrapper)
 
