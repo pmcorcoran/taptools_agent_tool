@@ -10,6 +10,8 @@ The four files currently in the repository are
 api wrapper logic. And is given to the agent in tool.py so the agent
 knows the information available and what endpoint and parameters
 are needed to to request that information.
+- non_nft_schema.json: same as schema.json but nft related endpoints are
+removed to reduce input tokens. Recommended if you don't need NFT info.
 - policy_and_hex.json: contains the policy id and hex name for
 cardano native tokens. These values are required as parameters for certain
 api calls. Currently only contains SNEK, more will be added. This is also
